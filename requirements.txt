@@ -1,12 +1,6 @@
 # This file may be used to create an environment using:
 # $ conda create --name <env> --file <this file>
 # platform: osx-64
-alabaster=0.7.12=py_0
-altair=4.1.0=pypi_0
-anaconda=2020.11=py38_0
-anaconda-client=1.7.2=py38_0
-anaconda-navigator=1.10.0=py38_0
-anaconda-project=0.8.4=py_0
 applaunchservices=0.2.1=py_0
 appnope=0.1.0=py38_1001
 appscript=1.1.1=py38haf1e3a3_0
