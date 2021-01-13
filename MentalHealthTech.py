@@ -20,8 +20,7 @@ from collections import Counter
 import seaborn as sns
 import torch
 import matplotlib
-from matplotlib
-import pyplot as plt
+from matplotlib import pyplot as plt
 st.set_option('deprecation.showPyplotGlobalUse', False)
 from sklearn.preprocessing import LabelEncoder
 
