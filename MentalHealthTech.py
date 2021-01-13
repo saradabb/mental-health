@@ -3,7 +3,6 @@
 
 # In[5]:
 
-
 import pandas as pd
 import numpy as np
 import csv
@@ -18,11 +17,11 @@ from transformers import Pipeline #to allow question and answer
 from transformers import pipeline #to allow question and answer
 import csv
 from collections import Counter
-import scipy.stats as stats
 import seaborn as sns
 import torch
 import matplotlib
-from matplotlib import pyplot as plt
+from matplotlib
+import pyplot as plt
 st.set_option('deprecation.showPyplotGlobalUse', False)
 from sklearn.preprocessing import LabelEncoder
 
