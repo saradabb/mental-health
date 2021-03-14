@@ -23,6 +23,15 @@ import matplotlib
 from matplotlib import pyplot as plt
 st.set_option('deprecation.showPyplotGlobalUse', False)
 from sklearn.preprocessing import LabelEncoder
+import warnings
+
+def fxn():
+    warnings.warn("deprecated", DeprecationWarning)
+
+with warnings.catch_warnings():
+    warnings.simplefilter("ignore")
+    fxn()
+
 
 
 NUM_SENT = 10
@@ -100,18 +109,6 @@ def main ():
         img = Image.open ('mental.jpg')
         st.image(img,width=450)
         st.write("This dashboard explores a dataset from a 2014 survey that measures attitudes towards mental health and frequency of mental health disorder. We aim from this dashboard to investigate the attitude people have towards mental health in the worklplace and the interaction between different variables in the dataset. Navigate through the menu on the left to signup, log-in, and explore!")
-        #File uploader to drop the dataset
-        data = st.file_uploader("Upload file here (only excel or csv acceptable):", type=['csv','xlsx'])
-        #Reading the data and analyzing it
-        if df is not None:
-            df=pd.read_csv(data)
-        else:
-            df=pd.read_csv('Mentalhealth_tech.csv')
-            progress_bar = st.progress(0)
-            for i in range(100):
-                progress_bar.progress(i + 1)
-                time.sleep(0.1)
-            st.success("Data Upload Successful")
 
 
     elif choice == "SignUp":
@@ -343,6 +340,8 @@ def main ():
 
                 elif task == "Ask me something!":
                     st.subheader ("Ask me something about Mental Health!")
+                    import warnings
+                    warnings.filterwarnings("ignore")
                     wiki_query = st.text_input("WIKIPEDIA SEARCH TERM", "")
                     wiki_para = get_wiki_paragraph(wiki_query)
                     paragraph_slot = st.empty()
